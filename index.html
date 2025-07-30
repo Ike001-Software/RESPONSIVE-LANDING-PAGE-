@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Landing Page for Aura Desk">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Landing Page</title>
+  <style>
+    .logo {
+      background-image: url('/logo.png');
+    }
+    
+    .title {
+      background: linear-gradient(to right, red 20%, blue 50%, red 80%, blue 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .menu:hover {
+      background: linear-gradient(to right, red 20%, blue 50%, red 80%, blue 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .hero {
+      height: 95vh;
+    }
+    
+    @media (min-width: 768px) {
+      .hero {
+        height: 100vh;
+      }
+      
+      .pic-img {
+        height: 70vh;
+      }
+      
+      .pain-section {
+        height: 120vh;
+      }
+      
+      .person-img-con {
+        width: 100vw;
+      }
+    }
+    
+    .cta-btn {
+      background: linear-gradient(to right, red 20%, blue 50%, red 80%, blue 100%);
+    }
+    
+    .cta-btn:hover {
+      background-color: white;
+      background: linear-gradient(to right, red 20%, blue 50%, red 80%, blue 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .pain-section {
+      height: 100vh;
+    }
+    
+    .pic-img {
+      background-image: url('/img1.jpg');
+    }
+    
+    .features {
+      
+    }
+    
+    .pic-img2 {
+      height: 100vh;
+    }
+    
+    .feature-icon1 {
+      background-image: url('/icon1.png');
+    }
+    
+    .feature-icon2 {
+      background-image: url('/icon2.png');
+    }
+    
+    .feature-icon3 {
+      background-image: url('/icon3.png');
+    }
+    
+    .feature-icon4 {
+      background-image: url('/icon4.png');
+    }
+    
+    .assurance-section {
+      height: 80vh;
+    }
+    
+    .test-people-and-text {
+      
+    }
+    
+    .person-img-con {
+      width: 90vw;
+      height: 100vh;
+    }
+    
+    .img-a {
+      background-image: url('/img-alex.png');
+    }
+    
+    .img-b {
+      background-image: url('/img-sarah.png');
+    }
+  </style>
+</head>
+<body class="">
+  <header class="flex justify-between items-center p-4 md:p-4 bg-white fixed w-full z-50 border-b-2 border-blue-600">
+    <div class="logo-title flex justify-between items-center">
+      <div class="logo h-12 w-12 flex bg-center bg-contain bg-no-repeat"></div>
+      <h1 class="logo title text-3xl font-bold font-serif">Aura Desk</h1>
+    </div>
+    <div id="menu-lines" class="menu-lines md:hidden flex flex-col h-4 justify-between items-center cursor-pointer">
+      <div class="menu-line h-0.5 w-4 bg-black rounded"></div>
+      <div class="menu-line h-0.5 w-4 bg-black rounded"></div>
+      <div class="menu-line h-0.5 w-4 bg-black rounded"></div>
+    </div>
+    <nav class="hidden md:flex">
+      <ul class="hidden md:flex md:justify-between md:items-center md:gap-4 font-medium text-blue-600">
+        <li><a href="#hero" target="" class="menu">Home</a></li>
+        <li><a href="" target="" class="menu">About Us</a></li>
+        <li><a href="mailto:ikechukwuorji236@gmail.com" target="" class="menu">Contact Us</a></li>
+        <div class="fb-logo"></div>
+        <div class="ig-logo"></div>
+        <div class="x-logo"></div>
+      </ul>
+      <div class="block md:hidden">
+        <ul id="menus" class="menus flex flex-col gap-4 bg-white text-blue-600 p-8 h-auto w-full">
+          <li><a href="#hero" class="">Home</a></li>
+          <li><a href="#" class="">About</a></li>
+          <li><a href="#" class="">Services</a></li>
+          <li><a href="mailto:ikechukwuorji236@gmail.com" class="">Contact</a></li>
+       </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+     <!-- 🟢 Hero Section (Headline + Subheadline + CTA) -->
+  <section id="hero" class="hero p-6 pt-32 pb-8 bg-blue-700 text-white flex flex-col justify-center gap-4 md:items-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-center md:w-3/5">Build Your Personal Brand on All your Social Media Platforms — From One Place</h1>
+    <h2 class="text-center text-gray-300 my-2 md:w-3/5 md:text-2xl">Post, Schedule and Engage with your audience on all your Social Media just from a single tab</h2>
+    <button type="button" class="cta-btn h-12 w-68 font-semibold text-2xl text-white px-2 my-4 rounded-3xl md:w-3/5">Start now for Free!</button>
+  </section>
+  <section class="pain-section px-4 py-12 md:grid md:grid-cols-2 md:items-center md:gap-8 md:py-4 md:px-0">
+    <h2 class="pain title text-3xl font-bold text-center py-12 md:col-span-2 md:pb-2">We Understand Your Plight</h2>
+    <p class="md:text-xl md:col-start-1 md:col-end-2 md:px-8">We understand how difficult showing up can be across multiple platforms daily? <br>It’s exhausting, but worry no more, we've cleared that hurdle.
+    <br><br>Aura Desk gives you the clarity, control, and consistency you need — from just one dashboard.</p>
+    <div class="pic-img h-1/3 w-68 md:h-full w-full my-8 bg-contain md:bg-cover bg-center bg-no-repeat md:bg-red-400 md:col-start-2 md:col-end-3"></div>
+  </section>
+  <section class="features px-4 bg-blue-200 py-8 md:grid md:grid-cols-2 md:gap-8 items-center">
+    <h2 class="feature title text-3xl font-bold text-center py-12 md:col-span-2">Here's Why Aura Desk is Best for You</h2>
+    <div class="pic-img2 w-68 bg-blue-600"></div>
+    <div class="features-text my-8 px-4 py-8 bg-white rounded-2xl md:text-xl">
+      <div class="feature-con flex gap-4 py-8">
+        <div class="feature-icon1 h-12 w-24 bg-center bg-contain bg-no-repeat"></div>
+      <div class="feature-text">
+        <p class="font-semibold text-blue-600 mb-4">"I'm drained from trying to stay consistent on all platforms."</p>
+      <p class="font-medium italic text-red-600">Connect and manage all your social platforms in one place with our All-in-One Dashboard</p>
+      </div>
+      </div>
+      <div class="feature-con flex gap-4">
+        <div class="feature-icon2 h-12 w-24 flex bg-center bg-contain bg-no-repeat"></div>
+    <div class="feature-text">
+      <p class="font-semibold text-blue-600 mb-4">"I want to build my brand, but I can’t keep up with content for Instagram, LinkedIn, TikTok, Twitter..."</p>
+    <p class="font-medium italic text-red-600">Plan and organize content tailored to each platform, stress-free with our Smart Content Planner
+    <br>Turn one post into five with our AI-powered Content Repurposing Tools</p>
+    </div>
+      </div>
+      <div class="feature-con flex gap-4 py-8">
+        <div class="feature-icon3 h-12 w-24 flex bg-center bg-contain bg-no-repeat"></div>
+    <div class="feature-text">
+      <p class="font-semibold text-blue-600 mb-4">"I'm constantly switching between apps, trying to engage, post, and grow — it’s too much."</p>
+    <p class="font-medium italic text-red-600">Schedule and post across all platforms with just one click with our Cross Platform Publishing Tool
+    <br>Reply to DMs, comments, and mentions from one simple interface through our Tailored Engagement Inbox</p>
+    </div>
+      </div>
+      <div class="feature-con flex gap-4 py-8">
+        <div class="feature-icon4 h-12 w-24 flex bg-center bg-contain bg-no-repeat"></div>
+    <diiv class="feature-text">
+      <p class="font-semibold text-blue-600 mb-4">"I want to always know what's working and what isn't on all platforms at a go"</p>
+    <p class="font-medium italic text-red-600">See what’s working and optimize faster with actionable analytics using the "Insights That Matter" feature</p>
+    </diiv>
+      </div>
+    </div>
+  </section>
+  <section class="assurance-section px-4 py-12 flex flex-col justify-center items-center gap-12 md:grid md:grid-cols-2 md:gap-8">
+    <div class="assurance-text flex flex-col justify-center md:gap-8">
+      <p class="text-2xl font-medium italic title text-center">Now, you can manage your entire online presence from one place — plan, create, post, and engage — without spending 18hrs of your day trying to stay active.</p>
+    <button type="button" class="cta-btn h-12 w-68 font-semibold text-2xl text-white px-4 my-4 rounded-3xl">Start now for Free!</button>
+    </div>
+    <div class="hidden md:flex assurance-img bg-red-400 h-full w-full"></div>
+  </section>
+  <section class="audience px-4 pb-8 md:py-12 border-t-2 border-blue-600">
+    <div class="audience-header">
+      <h2 class="audience title text-3xl font-bold text-center py-12">Who Can Use Aura Desk?</h2>
+    <p class="text-2xl font-medium text-black md:text-center">Aura Desk is built for:</p>
+    </div>
+    <div class="aud-images-con py-8 flex flex-col gap-12 md:grid md:grid-cols-4 md:gap-4">
+      <div class="aud-img-con flex flex-col gap-2">
+      <div class="aud-img h-60 w-68 bg-blue-600 md:h-96"></div>
+    <p class="font-light italic text-2xl text-center">Solo Creators</p>
+    </div>  
+    <div class="aud-img-con flex flex-col gap-2">
+      <div class="aud-img h-60 w-68 bg-blue-600 md:h-96"></div>
+    <p class="font-light italic text-2xl text-center">Coaches</p>
+    </div>
+    <div class="aud-img-con flex flex-col gap-2">
+      <div class="aud-img h-60 w-68 bg-blue-600 md:h-96"></div>
+    <p class="font-light italic text-2xl text-center">Thought Leaders</p>
+    </div>
+    <div class="aud-img-con flex flex-col gap-2">
+      <div class="aud-img h-60 w-68 bg-blue-600 md:h-96"></div>
+    <p class="font-light italic text-2xl text-center">Personal Brands</p>
+    </div>
+    </div>
+    <p class="text-2xl font-medium italic title text-center">If you want to grow your brand without losing your mind, you belong here.</p>
+  </section>
+  <section class="testimonials px-4 py-12 bg-blue-200">
+    <div class="test-people-and-text overflow-x-auto whitespace-nowrap w-auto">
+      <div class="person-img-con inline-block align-top mr-8 md:mr-24">
+      <div class="person-img img-a h-4/5 bg-contain bg-center bg-no-repeat"></div>
+    <p class="whitespace-normal px-4 py-8 bg-white rounded-2xl">"Aura Desk changed the game for me — I’m more consistent, less stressed, and finally seeing real growth."
+    — Alex M., Business Coach</p>
+    </div>
+    <div class="person-img-con inline-block align-top">
+      <div class="person-img img-b h-4/5 w-full bg-contain bg-center bg-no-repeat"></div>
+    <p class="whitespace-normal px-4 py-8 bg-white rounded-2xl">"Managing 5 platforms used to feel like 5 jobs. Now it’s just one tab."
+    — Sarah A., Creator & Speaker</p>
+    </div>
+    </div>
+  </section>
+  <section class="assurance-section2 px-4 py-12 flex flex-col justify-center md:items-center">
+    <p class="text-2xl font-medium italic title text-center">You didn’t choose to build your Brand just to stay overwhelmed and drained out.
+    <br>You have a message — and the world needs to hear it.
+    <br>Let Aura Desk help you show up fully — without the chaos.</p>
+    <button type="button" class="cta-btn h-12 w-68 font-semibold text-2xl text-white px-4 my-4 rounded-3xl md:w-64">Start Today for Free!</button>
+  </section>
+  </main>
+  <footer class="px-4 py-16 bg-blue-200">
+    <div class="footer px-4 py-8 bg-white rounded-2xl">
+      <div class="company flex flex-col justify-center items-center">
+      <h2 class="title text-2xl font-semibold text-center">Company</h2>
+    <a href="" target="" class="text-center py-4">Careers</a>
+    </div>
+    <div class="legal flex flex-col justify-center items-center">
+      <h2 class="title text-2xl font-semibold text-center">Legal</h2>
+    <div class="legal-links py-4 flex flex-col justify-center items-center gap-2">
+      <a href="" target="">Terms and Conditions</a>
+    <a href="" target="">Privacy Policy</a>
+    </div>
+    </div>
+    <div class="follow-us flex flex-col justify-center items-center">
+      <h2 class="title text-2xl font-semibold text-center">Follow Us</h2>
+    <div class="socials">
+      <a href="" target=""><div class="fb-logo"></div></a>
+    <a href="" target=""><div class="ig-logo"></div></a>
+    <a href="" target=""><div class="x-logo"></div></a>
+    </div>
+    </div>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>

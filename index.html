@@ -70,7 +70,11 @@
     }
     
     .pic-img2 {
-      height: 100vh;
+      height: 140vh;
+      background-image: url('/img3.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     
     .feature-icon1 {
@@ -93,6 +97,41 @@
       height: 80vh;
     }
     
+    .assurance-img {
+      background-image: url('/img4.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .solo-creators {
+      background-image: url('/soloCreator.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .coaches {
+      background-image: url('/coach.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .thought-leaders {
+      background-image: url('/thoughtLeader.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .personal-brands {
+      background-image: url('/founder.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
     .test-people-and-text {
       
     }
@@ -112,35 +151,41 @@
   </style>
 </head>
 <body class="">
-  <header class="flex justify-between items-center p-4 md:p-4 bg-white fixed w-full z-50 border-b-2 border-blue-600">
-    <div class="logo-title flex justify-between items-center">
-      <div class="logo h-12 w-12 flex bg-center bg-contain bg-no-repeat"></div>
-      <h1 class="logo title text-3xl font-bold font-serif">Aura Desk</h1>
-    </div>
-    <div id="menu-lines" class="menu-lines md:hidden flex flex-col h-4 justify-between items-center cursor-pointer">
-      <div class="menu-line h-0.5 w-4 bg-black rounded"></div>
-      <div class="menu-line h-0.5 w-4 bg-black rounded"></div>
-      <div class="menu-line h-0.5 w-4 bg-black rounded"></div>
-    </div>
-    <nav class="hidden md:flex">
-      <ul class="hidden md:flex md:justify-between md:items-center md:gap-4 font-medium text-blue-600">
-        <li><a href="#hero" target="" class="menu">Home</a></li>
-        <li><a href="" target="" class="menu">About Us</a></li>
-        <li><a href="mailto:ikechukwuorji236@gmail.com" target="" class="menu">Contact Us</a></li>
-        <div class="fb-logo"></div>
-        <div class="ig-logo"></div>
-        <div class="x-logo"></div>
-      </ul>
-      <div class="block md:hidden">
-        <ul id="menus" class="menus flex flex-col gap-4 bg-white text-blue-600 p-8 h-auto w-full">
-          <li><a href="#hero" class="">Home</a></li>
-          <li><a href="#" class="">About</a></li>
-          <li><a href="#" class="">Services</a></li>
-          <li><a href="mailto:ikechukwuorji236@gmail.com" class="">Contact</a></li>
-       </ul>
-      </div>
-    </nav>
-  </header>
+  <!-- Header Section -->
+  <header class="flex justify-between items-center p-4 bg-white fixed w-full z-50 border-b-2 border-blue-600">
+  <div class="logo-title flex justify-between items-center">
+    <div class="logo h-12 w-12 flex bg-center bg-contain bg-no-repeat"></div>
+    <h1 class="logo title text-3xl font-bold font-serif">Aura Desk</h1>
+  </div>
+
+  <!-- Hamburger menu (mobile only) -->
+  <div id="menu-lines" class="md:hidden flex flex-col h-4 justify-between items-center cursor-pointer">
+    <div class="h-0.5 w-5 bg-black rounded"></div>
+    <div class="h-0.5 w-5 bg-black rounded"></div>
+    <div class="h-0.5 w-5 bg-black rounded"></div>
+  </div>
+
+  <!-- Desktop Nav -->
+  <nav class="hidden md:flex">
+    <ul class="flex justify-between items-center gap-4 font-medium text-blue-600">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="mailto:ikechukwuorji236@gmail.com">Contact Us</a></li>
+      <div class="fb-logo"></div>
+      <div class="ig-logo"></div>
+      <div class="x-logo"></div>
+    </ul>
+  </nav>
+</header>
+
+<!-- Mobile Nav Menu (Initially hidden) -->
+<div id="menus" class="md:hidden hidden flex-col gap-4 bg-white font-semibold text-blue-600 p-8 w-full z-40 absolute top-20 left-0">
+  <ul>
+    <li><a href="#hero" class="menu">Home</a></li>
+    <li><a href="#about" class="menu">About</a></li>
+    <li><a href="mailto:ikechukwuorji236@gmail.com" class="menu">Contact</a></li>
+  </ul>
+</div>
   <main>
      <!-- 🟢 Hero Section (Headline + Subheadline + CTA) -->
   <section id="hero" class="hero p-6 pt-32 pb-8 bg-blue-700 text-white flex flex-col justify-center gap-4 md:items-center">
@@ -148,12 +193,14 @@
     <h2 class="text-center text-gray-300 my-2 md:w-3/5 md:text-2xl">Post, Schedule and Engage with your audience on all your Social Media just from a single tab</h2>
     <button type="button" class="cta-btn h-12 w-68 font-semibold text-2xl text-white px-2 my-4 rounded-3xl md:w-3/5">Start now for Free!</button>
   </section>
-  <section class="pain-section px-4 py-12 md:grid md:grid-cols-2 md:items-center md:gap-8 md:py-4 md:px-0">
+  <!-- Pain Section -->
+  <section id="about" class="pain-section px-4 py-12 md:grid md:grid-cols-2 md:items-center md:gap-8 md:py-4 md:px-0">
     <h2 class="pain title text-3xl font-bold text-center py-12 md:col-span-2 md:pb-2">We Understand Your Plight</h2>
     <p class="md:text-xl md:col-start-1 md:col-end-2 md:px-8">We understand how difficult showing up can be across multiple platforms daily? <br>It’s exhausting, but worry no more, we've cleared that hurdle.
     <br><br>Aura Desk gives you the clarity, control, and consistency you need — from just one dashboard.</p>
     <div class="pic-img h-1/3 w-68 md:h-full w-full my-8 bg-contain md:bg-cover bg-center bg-no-repeat md:bg-red-400 md:col-start-2 md:col-end-3"></div>
   </section>
+  <!-- Features Section -->
   <section class="features px-4 bg-blue-200 py-8 md:grid md:grid-cols-2 md:gap-8 items-center">
     <h2 class="feature title text-3xl font-bold text-center py-12 md:col-span-2">Here's Why Aura Desk is Best for You</h2>
     <div class="pic-img2 w-68 bg-blue-600"></div>
@@ -190,6 +237,7 @@
       </div>
     </div>
   </section>
+  <!-- Assurance Section -->
   <section class="assurance-section px-4 py-12 flex flex-col justify-center items-center gap-12 md:grid md:grid-cols-2 md:gap-8">
     <div class="assurance-text flex flex-col justify-center md:gap-8">
       <p class="text-2xl font-medium italic title text-center">Now, you can manage your entire online presence from one place — plan, create, post, and engage — without spending 18hrs of your day trying to stay active.</p>
@@ -204,24 +252,25 @@
     </div>
     <div class="aud-images-con py-8 flex flex-col gap-12 md:grid md:grid-cols-4 md:gap-4">
       <div class="aud-img-con flex flex-col gap-2">
-      <div class="aud-img h-60 w-68 bg-blue-600 md:h-96"></div>
+      <div class="aud-img solo-creators h-60 w-68 bg-blue-600 md:h-96"></div>
     <p class="font-light italic text-2xl text-center">Solo Creators</p>
     </div>  
     <div class="aud-img-con flex flex-col gap-2">
-      <div class="aud-img h-60 w-68 bg-blue-600 md:h-96"></div>
+      <div class="aud-img coaches h-60 w-68 bg-blue-600 md:h-96"></div>
     <p class="font-light italic text-2xl text-center">Coaches</p>
     </div>
     <div class="aud-img-con flex flex-col gap-2">
-      <div class="aud-img h-60 w-68 bg-blue-600 md:h-96"></div>
+      <div class="aud-img thought-leaders h-60 w-68 bg-blue-600 md:h-96"></div>
     <p class="font-light italic text-2xl text-center">Thought Leaders</p>
     </div>
     <div class="aud-img-con flex flex-col gap-2">
-      <div class="aud-img h-60 w-68 bg-blue-600 md:h-96"></div>
+      <div class="aud-img personal-brands h-60 w-68 bg-blue-600 md:h-96"></div>
     <p class="font-light italic text-2xl text-center">Personal Brands</p>
     </div>
     </div>
     <p class="text-2xl font-medium italic title text-center">If you want to grow your brand without losing your mind, you belong here.</p>
   </section>
+  <!-- Testimonials Section -->
   <section class="testimonials px-4 py-12 bg-blue-200">
     <div class="test-people-and-text overflow-x-auto whitespace-nowrap w-auto">
       <div class="person-img-con inline-block align-top mr-8 md:mr-24">
@@ -236,6 +285,7 @@
     </div>
     </div>
   </section>
+  <!-- Assurance Section 2 -->
   <section class="assurance-section2 px-4 py-12 flex flex-col justify-center md:items-center">
     <p class="text-2xl font-medium italic title text-center">You didn’t choose to build your Brand just to stay overwhelmed and drained out.
     <br>You have a message — and the world needs to hear it.

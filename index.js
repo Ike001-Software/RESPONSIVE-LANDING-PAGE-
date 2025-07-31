@@ -3,7 +3,7 @@ const menuLines = document.getElementById("menu-lines");
 const menus = document.getElementById("menus");
 
 menuLines.addEventListener("click", () => {
-  menus.classList.toggle("menus");
+  menus.classList.toggle("hidden");
 });
 
 // User taps on the Button

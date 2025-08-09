@@ -28,30 +28,21 @@
       height: 95vh;
     }
     
-    @media (min-width: 768px) {
-      .hero {
-        height: 100vh;
-      }
-      
-      .pic-img {
-        height: 70vh;
-      }
-      
-      .pain-section {
-        height: 120vh;
-      }
-      
-      .person-img-con {
-        width: 100vw;
-      }
+    .content {
+      animation: slideUp 0.8s linear forwards;
     }
     
-    .cta-btn {
+      .cta-btn {
       background: linear-gradient(to right, red 20%, blue 50%, red 80%, blue 100%);
+      animation: pulse 0.6s ease-in-out infinite;
     }
     
     .cta-btn:hover {
-      background-color: white;
+      background: white;
+      border: 2px solid blue;
+    }
+    
+    .cta-btn-text:hover {
       background: linear-gradient(to right, red 20%, blue 50%, red 80%, blue 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -104,6 +95,10 @@
       background-size: cover;
     }
     
+    .audience {
+      
+    }
+    
     .solo-creators {
       background-image: url('/soloCreator.png');
       background-position: center;
@@ -148,11 +143,88 @@
     .img-b {
       background-image: url('/img-sarah.png');
     }
+    
+    @keyframes slideUp {
+      0% {
+        transform: translateY(80%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes moveLeft {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-115%);
+      }
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) and (orientation: portrait) {
+      .cta-btn {
+        width: 18rem;
+      }
+      
+      .pain-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .features-text {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .hero {
+        height: 100vh;
+      }
+      
+      .pic-img {
+        height: 70vh;
+      }
+      
+      .pain-section {
+        height: 120vh;
+      }
+      
+      .aud-images-con {
+        animation: moveLeft 12s linear infinite;
+      }
+      
+      .aud-img-con {
+        
+      }
+      
+      .person-img-con {
+        width: 100vw;
+      }
+    }
   </style>
 </head>
-<body class="">
+<body class="text-base text-gray-500">
   <!-- Header Section -->
   <header class="flex justify-between items-center p-4 bg-white fixed w-full z-50 border-b-2 border-blue-600">
+    
+    <!-- Logo and Title -->
   <div class="logo-title flex justify-between items-center">
     <div class="logo h-12 w-12 flex bg-center bg-contain bg-no-repeat"></div>
     <h1 class="logo title text-3xl font-bold font-serif">Aura Desk</h1>
@@ -168,110 +240,160 @@
   <!-- Desktop Nav -->
   <nav class="hidden md:flex">
     <ul class="flex justify-between items-center gap-4 font-medium text-blue-600">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="mailto:ikechukwuorji236@gmail.com">Contact Us</a></li>
+      <li><a href="#hero" class="menu">Home</a></li>
+      <li><a href="#about" class="menu">About Us</a></li>
+      <li><a href="mailto:ikechukwuorji236@gmail.com" class="menu">Contact Us</a></li>
       <div class="fb-logo"></div>
       <div class="ig-logo"></div>
       <div class="x-logo"></div>
     </ul>
   </nav>
-</header>
-
-<!-- Mobile Nav Menu (Initially hidden) -->
-<div id="menus" class="md:hidden hidden flex-col gap-4 bg-white font-semibold text-blue-600 p-8 w-full z-40 absolute top-20 left-0">
+  
+  <!-- Mobile Nav Menu (Initially hidden) -->
+<div id="menus" class="md:hidden hidden flex-col gap-4 bg-white font-semibold text-blue-600 p-8 w-full z-40 absolute fixed top-20 left-0 border-2 border-blue-600">
   <ul>
     <li><a href="#hero" class="menu">Home</a></li>
     <li><a href="#about" class="menu">About</a></li>
     <li><a href="mailto:ikechukwuorji236@gmail.com" class="menu">Contact</a></li>
   </ul>
 </div>
+</header>
   <main>
+    
      <!-- 🟢 Hero Section (Headline + Subheadline + CTA) -->
-  <section id="hero" class="hero p-6 pt-32 pb-8 bg-blue-700 text-white flex flex-col justify-center gap-4 md:items-center">
-    <h1 class="text-4xl md:text-5xl font-bold text-center md:w-3/5">Build Your Personal Brand on All your Social Media Platforms — From One Place</h1>
-    <h2 class="text-center text-gray-300 my-2 md:w-3/5 md:text-2xl">Post, Schedule and Engage with your audience on all your Social Media just from a single tab</h2>
-    <button type="button" class="cta-btn h-12 w-68 font-semibold text-2xl text-white px-2 my-4 rounded-3xl md:w-3/5">Start now for Free!</button>
+  <section id="hero" class="hero p-6 pt-32 pb-8 bg-blue-700 text-white flex flex-col justify-center items-center gap-4 md:items-center">
+    <h1 class="content text-4xl md:text-5xl font-bold text-center md:w-3/5">Build Your Personal Brand on All your Social Media Platforms — From One Place</h1>
+    <h2 class="content text-center text-gray-300 my-2 md:w-3/5 md:text-2xl">Post, Schedule and Engage with your audience on all your Social Media just from a single tab</h2>
+    
+    <!-- Hero CTA Button -->
+    <button type="button" class="content cta-btn h-12 w-60 font-semibold text-2xl text-white px-2 my-4 rounded-3xl md:w-72"><span class="cta-btn-text">Start now for Free!</span></button>
   </section>
+  
   <!-- Pain Section -->
   <section id="about" class="pain-section px-4 py-12 md:grid md:grid-cols-2 md:items-center md:gap-8 md:py-4 md:px-0">
+    
+    <!-- Pain Title Text -->
     <h2 class="pain title text-3xl font-bold text-center py-12 md:col-span-2 md:pb-2">We Understand Your Plight</h2>
     <p class="md:text-xl md:col-start-1 md:col-end-2 md:px-8">We understand how difficult showing up can be across multiple platforms daily? <br>It’s exhausting, but worry no more, we've cleared that hurdle.
-    <br><br>Aura Desk gives you the clarity, control, and consistency you need — from just one dashboard.</p>
-    <div class="pic-img h-1/3 w-68 md:h-full w-full my-8 bg-contain md:bg-cover bg-center bg-no-repeat md:bg-red-400 md:col-start-2 md:col-end-3"></div>
+    <br><br>Aura Desk gives you the clarity, control, and consistency you need, all from just one dashboard.</p>
+    
+    <!-- Pain Section Image -->
+    <div class="pic-img h-1/2 w-full bg-contain my-4 pb-4 bg-center bg-no-repeat hover:scale-105 transition transform duration-300 md:bg-cover md:h-full md:bg-red-400 md:col-start-2 md:col-end-3 md:w-68"></div>
   </section>
+  
   <!-- Features Section -->
-  <section class="features px-4 bg-blue-200 py-8 md:grid md:grid-cols-2 md:gap-8 items-center">
+  <section class="features px-4 bg-blue-200 py-8 items-center">
+    
+    <!-- Features Title -->
     <h2 class="feature title text-3xl font-bold text-center py-12 md:col-span-2">Here's Why Aura Desk is Best for You</h2>
-    <div class="pic-img2 w-68 bg-blue-600"></div>
-    <div class="features-text my-8 px-4 py-8 bg-white rounded-2xl md:text-xl">
-      <div class="feature-con flex gap-4 py-8">
-        <div class="feature-icon1 h-12 w-24 bg-center bg-contain bg-no-repeat"></div>
-      <div class="feature-text">
+    
+    <!-- Features Text Container -->
+    <div class="features-text my-8 px-4 py-8 bg-white rounded-2xl md:text-xl md:grid md:grid-cols-2 md:gap-8">
+      <!-- Each Feature Text Container -->
+      <div class="feature-con flex gap-4 py-8 md:flex-col md:justify-center md:items-center">
+        <div class="feature-icon1 h-12 w-24 bg-center bg-contain bg-no-repeat md:transition md:transform md:hover:scale-110 md:duration-300 md:h-24"></div>
+      <div class="feature-text md:w-4/5">
         <p class="font-semibold text-blue-600 mb-4">"I'm drained from trying to stay consistent on all platforms."</p>
       <p class="font-medium italic text-red-600">Connect and manage all your social platforms in one place with our All-in-One Dashboard</p>
       </div>
       </div>
-      <div class="feature-con flex gap-4">
-        <div class="feature-icon2 h-12 w-24 flex bg-center bg-contain bg-no-repeat"></div>
-    <div class="feature-text">
+        <!-- Each Feature Text Container -->
+      <div class="feature-con flex gap-4 md:flex-col md:justify-center md:items-center">
+        <div class="feature-icon2 h-12 w-24 flex bg-center bg-contain bg-no-repeat md:transition md:transform md:hover:scale-110 md:duration-300 md:h-24"></div>
+    <div class="feature-text md:w-4/5">
       <p class="font-semibold text-blue-600 mb-4">"I want to build my brand, but I can’t keep up with content for Instagram, LinkedIn, TikTok, Twitter..."</p>
-    <p class="font-medium italic text-red-600">Plan and organize content tailored to each platform, stress-free with our Smart Content Planner
-    <br>Turn one post into five with our AI-powered Content Repurposing Tools</p>
+    <p class="font-medium italic text-red-600">Plan and organize content tailored to each platform, stress-free with our Smart Content Planner</p>
     </div>
       </div>
-      <div class="feature-con flex gap-4 py-8">
-        <div class="feature-icon3 h-12 w-24 flex bg-center bg-contain bg-no-repeat"></div>
-    <div class="feature-text">
+        <!-- Each Feature Text Container -->
+      <div class="feature-con flex gap-4 py-8 md:flex-col md:justify-center md:items-center">
+        <div class="feature-icon3 h-12 w-24 flex bg-center bg-contain bg-no-repeat md:transition md:transform md:hover:scale-110 md:duration-300 md:h-24"></div>
+    <div class="feature-text md:w-4/5">
       <p class="font-semibold text-blue-600 mb-4">"I'm constantly switching between apps, trying to engage, post, and grow — it’s too much."</p>
-    <p class="font-medium italic text-red-600">Schedule and post across all platforms with just one click with our Cross Platform Publishing Tool
-    <br>Reply to DMs, comments, and mentions from one simple interface through our Tailored Engagement Inbox</p>
+    <p class="font-medium italic text-red-600">Schedule, post and engage across all platforms with just one click with our Cross Platform Publishing Tool</p>
     </div>
       </div>
-      <div class="feature-con flex gap-4 py-8">
-        <div class="feature-icon4 h-12 w-24 flex bg-center bg-contain bg-no-repeat"></div>
-    <diiv class="feature-text">
+        <!-- Each Feature Text Container -->
+      <div class="feature-con flex gap-4 py-8 md:flex-col md:justify-center md:items-center">
+        <div class="feature-icon4 h-12 w-24 flex bg-center bg-contain bg-no-repeat md:transition md:transform md:hover:scale-110 md:duration-300 md:h-24"></div>
+    <diiv class="feature-text md:w-4/5">
       <p class="font-semibold text-blue-600 mb-4">"I want to always know what's working and what isn't on all platforms at a go"</p>
     <p class="font-medium italic text-red-600">See what’s working and optimize faster with actionable analytics using the "Insights That Matter" feature</p>
     </diiv>
       </div>
     </div>
   </section>
+  
   <!-- Assurance Section -->
   <section class="assurance-section px-4 py-12 flex flex-col justify-center items-center gap-12 md:grid md:grid-cols-2 md:gap-8">
-    <div class="assurance-text flex flex-col justify-center md:gap-8">
+    <div class="assurance-text flex flex-col justify-center items-center md:items-center md:gap-8">
       <p class="text-2xl font-medium italic title text-center">Now, you can manage your entire online presence from one place — plan, create, post, and engage — without spending 18hrs of your day trying to stay active.</p>
-    <button type="button" class="cta-btn h-12 w-68 font-semibold text-2xl text-white px-4 my-4 rounded-3xl">Start now for Free!</button>
+      
+      <!-- Assurance CTA Button -->
+    <button type="button" class="cta-btn h-12 w-60 font-semibold text-2xl text-white px-4 my-4 rounded-3xl md:w-72"><span class="cta-btn-text">Start now for Free!</span></button>
     </div>
-    <div class="hidden md:flex assurance-img bg-red-400 h-full w-full"></div>
+    
+    <!-- Assurance Image -->
+    <div class="hidden assurance-img bg-red-400 h-full w-full md:flex md:transform md:transition md:hover:scale-105 md:duration-300"></div>
   </section>
-  <section class="audience px-4 pb-8 md:py-12 border-t-2 border-blue-600">
+  
+  <!-- Audience Section -->
+  <section class="audience px-4 pb-8 md:py-12 border-t-2 border-blue-600 md:overflow-hidden">
+    
+    <!-- Audience Section Title Text -->
     <div class="audience-header">
       <h2 class="audience title text-3xl font-bold text-center py-12">Who Can Use Aura Desk?</h2>
     <p class="text-2xl font-medium text-black md:text-center">Aura Desk is built for:</p>
     </div>
-    <div class="aud-images-con py-8 flex flex-col gap-12 md:grid md:grid-cols-4 md:gap-4">
-      <div class="aud-img-con flex flex-col gap-2">
-      <div class="aud-img solo-creators h-60 w-68 bg-blue-600 md:h-96"></div>
+    
+    <!-- Audience Images Section -->
+    <div class="aud-images-con py-8 flex flex-col gap-12 md:flex-row md:gap-4">
+      <!-- Each Audience Image -->
+      <div class="aud-img-con flex flex-col gap-2 transition transform hover:scale-105">
+      <div class="aud-img solo-creators h-60 w-68 bg-blue-600 md:h-96 md:w-80"></div>
     <p class="font-light italic text-2xl text-center">Solo Creators</p>
-    </div>  
-    <div class="aud-img-con flex flex-col gap-2">
-      <div class="aud-img coaches h-60 w-68 bg-blue-600 md:h-96"></div>
+    </div>
+      <!-- Each Audience Image -->
+    <div class="aud-img-con flex flex-col gap-2 transition transform hover:scale-105">
+      <div class="aud-img coaches h-60 w-68 bg-blue-600 md:h-96 md:w-80"></div>
     <p class="font-light italic text-2xl text-center">Coaches</p>
     </div>
-    <div class="aud-img-con flex flex-col gap-2">
-      <div class="aud-img thought-leaders h-60 w-68 bg-blue-600 md:h-96"></div>
+      <!-- Each Audience Image -->
+    <div class="aud-img-con flex flex-col gap-2 transition transform hover:scale-105">
+      <div class="aud-img thought-leaders h-60 w-68 bg-blue-600 md:h-96 md:w-80"></div>
     <p class="font-light italic text-2xl text-center">Thought Leaders</p>
     </div>
-    <div class="aud-img-con flex flex-col gap-2">
-      <div class="aud-img personal-brands h-60 w-68 bg-blue-600 md:h-96"></div>
+      <!-- Each Audience Image -->
+    <div class="aud-img-con flex flex-col gap-2 transition transform hover:scale-105">
+      <div class="aud-img personal-brands h-60 w-68 bg-blue-600 md:h-96 md:w-80"></div>
+    <p class="font-light italic text-2xl text-center">Personal Brands</p>
+    </div>
+      <!-- Each Audience Image -->
+    <div class="hidden aud-img-con md:flex md:flex-col md:gap-2 mmd:transition md:transform md:hover:scale-105">
+      <div class="aud-img solo-creators h-60 w-68 bg-blue-600 md:h-96 md:w-80"></div>
+    <p class="font-light italic text-2xl text-center">Solo Creators</p>
+    </div>
+    <!-- Each Audience Image -->
+    <div class="hidden aud-img-con md:flex md:flex-col md:gap-2 mmd:transition md:transform md:hover:scale-105">
+      <div class="aud-img coaches h-60 w-68 bg-blue-600 md:h-96 md:w-80"></div>
+    <p class="font-light italic text-2xl text-center">Coaches</p>
+    </div>
+    <!-- Each Audience Image -->
+    <div class="hidden aud-img-con md:flex md:flex-col md:gap-2 mmd:transition md:transform md:hover:scale-105">
+      <div class="aud-img thought-leaders h-60 w-68 bg-blue-600 md:h-96 md:w-80"></div>
+    <p class="font-light italic text-2xl text-center">Thought Leaders</p>
+    </div>
+    <!-- Each Audience Image -->
+    <div class="hidden aud-img-con md:flex md:flex-col md:gap-2 mmd:transition md:transform md:hover:scale-105">
+      <div class="aud-img personal-brands h-60 w-68 bg-blue-600 md:h-96 md:w-80"></div>
     <p class="font-light italic text-2xl text-center">Personal Brands</p>
     </div>
     </div>
-    <p class="text-2xl font-medium italic title text-center">If you want to grow your brand without losing your mind, you belong here.</p>
+    <p class="hidden text-2xl font-medium italic title text-center">If you want to grow your brand without losing your mind, you belong here.</p>
   </section>
+  
   <!-- Testimonials Section -->
-  <section class="testimonials px-4 py-12 bg-blue-200">
+  <section class="hidden testimonials px-4 py-12 bg-blue-200">
     <div class="test-people-and-text overflow-x-auto whitespace-nowrap w-auto">
       <div class="person-img-con inline-block align-top mr-8 md:mr-24">
       <div class="person-img img-a h-4/5 bg-contain bg-center bg-no-repeat"></div>
@@ -285,25 +407,28 @@
     </div>
     </div>
   </section>
+  
   <!-- Assurance Section 2 -->
-  <section class="assurance-section2 px-4 py-12 flex flex-col justify-center md:items-center">
+  <section class="assurance-section2 px-4 py-12 flex flex-col justify-center items-center md:items-center">
+    <!-- Assurance Section Text -->
     <p class="text-2xl font-medium italic title text-center">You didn’t choose to build your Brand just to stay overwhelmed and drained out.
     <br>You have a message — and the world needs to hear it.
     <br>Let Aura Desk help you show up fully — without the chaos.</p>
-    <button type="button" class="cta-btn h-12 w-68 font-semibold text-2xl text-white px-4 my-4 rounded-3xl md:w-64">Start Today for Free!</button>
+    <!-- Assurance Section CTA Button -->
+    <button type="button" class="cta-btn h-12 w-60 font-semibold text-2xl text-white px-4 my-4 rounded-3xl md:w-64"><span class="cta-btn-text">Start now for Free!</span></button>
   </section>
   </main>
   <footer class="px-4 py-16 bg-blue-200">
     <div class="footer px-4 py-8 bg-white rounded-2xl">
       <div class="company flex flex-col justify-center items-center">
       <h2 class="title text-2xl font-semibold text-center">Company</h2>
-    <a href="" target="" class="text-center py-4">Careers</a>
+    <a href="" target="" class="text-center py-4 hover:underline hover:text-blue-600">Careers</a>
     </div>
     <div class="legal flex flex-col justify-center items-center">
       <h2 class="title text-2xl font-semibold text-center">Legal</h2>
     <div class="legal-links py-4 flex flex-col justify-center items-center gap-2">
-      <a href="" target="">Terms and Conditions</a>
-    <a href="" target="">Privacy Policy</a>
+      <a href="" target="" class="hover:underline hover:text-blue-600">Terms and Conditions</a>
+    <a href="" target="" class="hover:underline hover:text-blue-600">Privacy Policy</a>
     </div>
     </div>
     <div class="follow-us flex flex-col justify-center items-center">
